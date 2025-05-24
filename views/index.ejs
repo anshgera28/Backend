@@ -20,11 +20,15 @@
         <% files.forEach(function(val){  %>
             <div class="task min-w-72 px-3 py-4 rounded-md bg-zinc-800">
                 <h1 class="text-white text-3xl tracking-tight"><%= val %></h1>
-                <a class="text-blue-500 inline-block mt-2" href="/file/<%= val %>">Read more</a>
+                <div class="flex w-full justify-between items-center mt-3">
+                    <a class="text-blue-500 inline-block " href="/file/<%= val %>">Read more</a>
+                <a class="text-zinc-600" href="/edit/<%= val %>">edit filename</a>
+                </div>
+                
             </div>
         <% }) %>
         <% } else { %>
-            <h3 class="text-zinc-600">No tasks available</h3>
+            <h3 class="text-zinc-600">No tasks available</h3>   
         <% } %>
        
     </div>
